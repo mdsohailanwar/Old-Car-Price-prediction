@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Old Car Price Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color:rgb(3, 131, 190); /* Green */
+    color: black;
+    text-align: left;
+
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default bg-4">
+  <div class="container">
+    <div class="navbar-header">
+      
+      <h2>Old Car Price Prediction</h2>
+    </div>
+    
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8"><p>This intelligent system can able to predicts the price of an old car as per market rate</p></div>
+    <div class="col-md-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+  <form action="{{ url_for('predict')}}"method="post">
+    <div class="form-group">
+      <label for="age_of_car">Age of the car.</label>
+      <input type="text" class="form-control" name="age_of_car" id="age_of_car" placeholder="Enter the age of car Ex: 1 " required="required">
+    </div>
+    <div class="form-group">
+      <label for="transmission">Transmission of car.</label>
+      <select input type="text" class="form-control"  name="transmission" id="transmission" placeholder="Enter the type of transmission car Ex: Manual" required="required" required>
+        <option value=0>Automatic</option>
+        <option value=1>Manual</option>
+        <option value=2>SemiAuto</option>
+      </select>
+          
+    </div>
+    <div class="form-group">
+      <label for="mileage"> Mileage covered.</label>
+      <input type="text" class="form-control" name="mileage" id="mileage" placeholder="Enter the Total miles travelled or covered Ex: 4562" required="required">
+    </div>
+    <div class="form-group">
+      <label for="fuelType">FuelType of car.</label>
+      <select input type="text" class="form-control" name="fuelType" id="fuelType" placeholder="Enter the fuelType of car Ex: Petrol " required="required" required>
+        <option value=0>Diesel</option>
+        <option value=1>Petrol</option>
+        <option value=2>Hybrid</option>
+        <option value=3>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="tax">Tax to be paid.</label>
+      <input type="text" class="form-control" name="tax" id="tax" placeholder="Enter the Tax to be paid for the car Ex: 145" required="required">
+    </div>
+    <div class="form-group">
+      <label for="mpg">Mileage of the car.</label>
+      <input type="text" class="form-control" name="mpg" id="mpg" placeholder="Enter the mileage of the car Ex: 49.6 " required="required">
+    </div>
+    <div class="form-group">
+      <label for="engineSize">Size of the Engine.</label>
+      <input type="text" class="form-control" name="engineSize" id="engineSize" placeholder="Enter the Size of the Enginer Ex: 2.0 " required="required">   
+    </div>
+    
+    
+    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict Price</button>
+  </form>
+
+</div>
+<div class="col-md-4"></div>
+</div>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Thanks to <a href="https://www.boardinfinity.com">BoardInfinity</a></p>
+  <p class='footer-description'>Made with ❤️ by Mohammed Sohail Anwar.</p>
+  <div class="contact" >
+    <a target="_blank" href="https://github.com/mdsohailanwar"><i class="fab fa-github fa-lg contact-icon" style="color:blanchedalmond !important"></i></a>
+    <a target="_blank" href="https://www.linkedin.com/in/mohammed-sohail-anwar/"><i class="fab fa-linkedin fa-lg contact-icon" style="color:blanchedalmond !important"></i></a>
+</div>
+   
+  
+</footer>
+
+</body>
+</html>
