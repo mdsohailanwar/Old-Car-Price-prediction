@@ -4,4 +4,6 @@ Until recently, automobile manufacturers and dealers have mainly focused on thei
 
 So, here I used this following dataset to predict the price of any used car depending on there features. We’ll use a dataset which was provided by the Board Infinity comprised of 15157 rows with 8 columns.
 
-https://oldcarpriceprediction-1.herokuapp.com/
+The dataset is broken into 11902 records for training and 2976 for testing. The goal is to build a system that can accurately predict the price of car. The competition is evaluated using mse, R2, Adjusted R2. Further, I built a flask API and deployed the model in the Heroku environment.
+
+Here is the link for Heroku cloud deployment of Old-Cars-price-Prediction: https://oldcarpriceprediction-1.herokuapp.com/
