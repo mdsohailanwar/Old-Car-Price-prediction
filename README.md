@@ -7,3 +7,11 @@ So, here I used this following dataset to predict the price of any used car depe
 The dataset is broken into 11902 records for training and 2976 for testing. The goal is to build a system that can accurately predict the price of car. The competition is evaluated using mse, R2, Adjusted R2. Further, I built a flask API and deployed the model in the Heroku environment.
 
 Here is the link for Heroku cloud deployment of Old-Cars-price-Prediction: https://oldcarpriceprediction-1.herokuapp.com/
+
+![image](https://user-images.githubusercontent.com/79276064/119237532-efd38680-bb5a-11eb-95b9-3169552aee8c.png)
+
+
+![image](https://user-images.githubusercontent.com/79276064/119237560-1691bd00-bb5b-11eb-9126-1c9d6ed7b02a.png)
+
+
+
